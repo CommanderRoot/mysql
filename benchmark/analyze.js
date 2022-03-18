@@ -16,8 +16,8 @@ function runScript() {
 
     var offset;
     while ((offset = buffer.indexOf('\n')) > -1) {
-      var number = parseInt(buffer.substr(0, offset), 10);
-      buffer = buffer.substr(offset + 1);
+      var number = parseInt(buffer.slice(0, offset), 10);
+      buffer = buffer.slice(offset + 1);
 
       var maxBefore = max();
       var minBefore = min();
